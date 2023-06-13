@@ -1,0 +1,372 @@
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git branch produccion
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git branch ventas
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git branch recurso_humano
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git branch
+* main
+  produccion
+  recurso_humano
+  ventas
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+esteb@Esteban MINGW64 /c/Git/Examen (produccion)
+$ git checkout ventas
+Switched to branch 'ventas'
+
+esteb@Esteban MINGW64 /c/Git/Examen (ventas)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git merge main
+Already up to date.
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        empleados.txt.txt
+        imagenproducto.png
+        materia prima.txt.txt
+        productofinal.txt.txt
+        tiendas.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ gid add .
+bash: gid: command not found
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git add .
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git commit -m "subir archivos"
+[main 86bd3f5] subir archivos
+ 5 files changed, 8 insertions(+)
+ create mode 100644 empleados.txt.txt
+ create mode 100644 imagenproducto.png
+ create mode 100644 materia prima.txt.txt
+ create mode 100644 productofinal.txt.txt
+ create mode 100644 tiendas.txt.txt
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 12.61 KiB | 6.30 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Esteban810/Examen.git
+   52fe6ef..86bd3f5  main -> main
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout ventas
+Switched to branch 'ventas'
+
+esteb@Esteban MINGW64 /c/Git/Examen (ventas)
+$ git status
+On branch ventas
+nothing to commit, working tree clean
+
+esteb@Esteban MINGW64 /c/Git/Examen (ventas)
+$ git push
+fatal: The current branch ventas has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ventas
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+esteb@Esteban MINGW64 /c/Git/Examen (ventas)
+$ git push origin -u ventas
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ventas' on GitHub by visiting:
+remote:      https://github.com/Esteban810/Examen/pull/new/ventas
+remote:
+To https://github.com/Esteban810/Examen.git
+ * [new branch]      ventas -> ventas
+branch 'ventas' set up to track 'origin/ventas'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (ventas)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+esteb@Esteban MINGW64 /c/Git/Examen (produccion)
+$ git push origin -u produccion
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'produccion' on GitHub by visiting:
+remote:      https://github.com/Esteban810/Examen/pull/new/produccion
+remote:
+To https://github.com/Esteban810/Examen.git
+ * [new branch]      produccion -> produccion
+branch 'produccion' set up to track 'origin/produccion'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (produccion)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git push origin -u recurso_humano
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'recurso_humano' on GitHub by visiting:
+remote:      https://github.com/Esteban810/Examen/pull/new/recurso_humano
+remote:
+To https://github.com/Esteban810/Examen.git
+ * [new branch]      recurso_humano -> recurso_humano
+branch 'recurso_humano' set up to track 'origin/recurso_humano'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout ventas
+Switched to branch 'ventas'
+Your branch is up to date with 'origin/ventas'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (ventas)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout ventas
+Switched to branch 'ventas'
+Your branch is up to date with 'origin/ventas'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (ventas)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+Your branch is up to date with 'origin/recurso_humano'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout produccion
+error: Your local changes to the following files would be overwritten by checkout:
+        empleados.txt.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   empleados.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git add .
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout produccion
+error: Your local changes to the following files would be overwritten by checkout:
+        empleados.txt.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git commit -m "nuevo cambio"
+[main 639a9bb] nuevo cambio
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout produccion
+Switched to branch 'produccion'
+Your branch is up to date with 'origin/produccion'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (produccion)
+$ git merge main
+Updating 52fe6ef..639a9bb
+Fast-forward
+ empleados.txt.txt     |  11 +++++++++++
+ imagenproducto.png    | Bin 0 -> 12456 bytes
+ materia prima.txt.txt |   0
+ productofinal.txt.txt |   0
+ tiendas.txt.txt       |   3 +++
+ 5 files changed, 14 insertions(+)
+ create mode 100644 empleados.txt.txt
+ create mode 100644 imagenproducto.png
+ create mode 100644 materia prima.txt.txt
+ create mode 100644 productofinal.txt.txt
+ create mode 100644 tiendas.txt.txt
+
+esteb@Esteban MINGW64 /c/Git/Examen (produccion)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+Your branch is up to date with 'origin/recurso_humano'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git merge main
+Updating 52fe6ef..639a9bb
+Fast-forward
+ empleados.txt.txt     |  11 +++++++++++
+ imagenproducto.png    | Bin 0 -> 12456 bytes
+ materia prima.txt.txt |   0
+ productofinal.txt.txt |   0
+ tiendas.txt.txt       |   3 +++
+ 5 files changed, 14 insertions(+)
+ create mode 100644 empleados.txt.txt
+ create mode 100644 imagenproducto.png
+ create mode 100644 materia prima.txt.txt
+ create mode 100644 productofinal.txt.txt
+ create mode 100644 tiendas.txt.txt
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git tag version1.1
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git tag
+version1.1
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git checkout ventas
+Switched to branch 'ventas'
+Your branch is up to date with 'origin/ventas'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (ventas)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   tiendas.txt.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fotos_empleados/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git add .
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git commit -m "empleados"
+[main 29f543e] empleados
+ 6 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 fotos_empleados/1.jpg
+ create mode 100644 fotos_empleados/2.jpg
+ create mode 100644 fotos_empleados/3.jpg
+ create mode 100644 fotos_empleados/4.jpg
+ create mode 100644 fotos_empleados/5.jpg
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git push
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 38.48 KiB | 12.83 MiB/s, done.
+Total 12 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Esteban810/Examen.git
+   86bd3f5..29f543e  main -> main
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+Your branch is ahead of 'origin/recurso_humano' by 2 commits.
+  (use "git push" to publish your local commits)
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git status
+On branch recurso_humano
+Your branch is ahead of 'origin/recurso_humano' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sueldos.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git add .
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git push origin -u recurso_humano
+To https://github.com/Esteban810/Examen.git
+ ! [rejected]        recurso_humano -> recurso_humano (fetch first)
+error: failed to push some refs to 'https://github.com/Esteban810/Examen.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git commit -m "sueldos"
+[recurso_humano eb54648] sueldos
+ 1 file changed, 5 insertions(+)
+ create mode 100644 sueldos.txt.txt
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git push origin -u recurso_humano
+To https://github.com/Esteban810/Examen.git
+ ! [rejected]        recurso_humano -> recurso_humano (fetch first)
+error: failed to push some refs to 'https://github.com/Esteban810/Examen.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+esteb@Esteban MINGW64 /c/Git/Examen (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$ git push
+Everything up-to-date
+
+esteb@Esteban MINGW64 /c/Git/Examen (main)
+$
